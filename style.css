@@ -1,0 +1,103 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background: rgba(0, 0, 0, 0.7) url('food.jpg') center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h3 {
+    color: #fff;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    height: 80px;
+    width: 100px;
+  }
+  
+  .header h1 {
+    color: #00FFFF;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .navbar li a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar li a:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+  }
+  
+  .reservation {
+    background-color: #00FFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  @media only screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header h1 {
+      margin: 0;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .content {
+      padding: 10px;
+    }
+  }
+  

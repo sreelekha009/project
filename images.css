@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .image-container img {
+    max-width: 400px; /* Adjust based on desired size */
+    height: auto;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Animation for smooth fade */
+  }
+  
+  .image-container.loaded img {
+    opacity: 1; /* Show images only after loading */
+  }
+  
+  .initial {
+    animation: slideUp 0.5s ease-in-out forwards; /* Individual animation for each image */
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px); /* Start from off-screen */
+    }
+    100% {
+      transform: translateY(0); /* End at default position */
+    }
+  }
+  

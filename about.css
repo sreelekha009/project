@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgba(0, 0, 0, 0.7) url('foood2.jpg') center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1{
+    color: #00FFFF;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+p{
+    color: white;
+    margin-bottom: 30px;
+}
+.fade-in {
+    animation: none; /* Initial state: hidden */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .slide-from-left {
+    animation: slide-from-left 1s ease-in-out forwards;
+  }
+  
+  @keyframes slide-from-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .hover-effect {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  
+  .hover-effect:hover {
+    color: #fff;
+    background-color: #333;
+  }
+  
+  /* Add your background animation styles here */
+  

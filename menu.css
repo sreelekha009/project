@@ -1,0 +1,134 @@
+/* Reset styles for better control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    background: rgba(0, 0, 0, 0.7) url('bg.jpg') center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+h1,h2, h3, p ,li{
+    animation: slideIn 1s ease-in-out forwards;
+  }
+  h1{
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: white;
+  }
+
+  h3{
+    color: black;
+  }
+  p{
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  h3{
+    margin-bottom: 15px;
+    color: white;
+  }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); /* Start from 50px above */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+    }
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+  
+  /* Carousel wrapper */
+  .menu-carousel {
+    margin-top: 50px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start; /* Snap to edges */
+    /* Optional: Set width/height if desired */
+  }
+  
+  /* Menu card styles */
+  .menu-card {
+    width: 300px; /* Adjust card width as needed */
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* Allow card content to overlay when hovering */
+    position: relative;
+    scroll-snap-align: start;
+    animation: slideInLeft 0.5s ease-in-out forwards;
+  margin-bottom: 20px; /* Snap to edges */
+  }
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px); /* Start from 50px left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End at original position */
+    }
+  }
+  
+  .menu-card img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 20px;
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    color: black;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .menu-card:hover .card-content {
+    opacity: 1;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  /* Navigation buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ddd;
+    border: none;
+    border-radius: 5px;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: #ccc;
+  }
+  
